@@ -124,9 +124,11 @@ def largest_n_items(items, n):
     """
     largest_items_list = []
     sorted_items = sorted(items)
-
-
-    return []
+    if n == 0:
+        largest_items_list = []
+    else:
+        largest_items_list = sorted_items[-n:]
+    return largest_items_list
 
 
 #####################################################################
